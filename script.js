@@ -14,6 +14,7 @@ function setupAppForUser(name){
   $("#add").click(function(){
     var roundname = $("#newround").val();
     firebase.database().ref('votes/'+roundname+'/'+name).set('undecided');
+    $("#newround").val('')
   })
   firebase.database().ref('votes').on('value',function(snapshot){
     $("#rows").empty()
