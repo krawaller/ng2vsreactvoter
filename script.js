@@ -46,5 +46,3 @@ $("#loginbtn").click(function(){
     alert("Something went wrong :(")
   });
 })
-
-setupAppForUser('Krawaller')
