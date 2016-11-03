@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NG2 VS REACT voter</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="app">
+      <h4>Log in to vote!</h4>
+      <button id="loginbtn">Authenticate with Github</button>
+    </div>
+    <script id="votertemplate" type="text/template">
+      <h4>Vote for the winner in each round!</h4>
+      <p>You'll get the ID for each round at their very end.</p>
+      <div id="rows"></div>
+      <hr>
+      <div id="new">
+        <input id="newround" placeholder="Enter round ID">
+        <button id="add">Add</button>
+      </div>
+    </script>
+    <script id="rowtemplate" type="text/template">
+      <div class="row">
+        <span class="roundname"></span>
+        <button class="voter votereact" data-fw="react">React</button>
+        <button class="voter voteng2" data-fw="ng2">Angular2</button>
+        <button class="del">Delete round</button>
+      </div>
+    </script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/firebase/firebase.js"></script>
+    <script src="node_modules/lodash/lodash.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
