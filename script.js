@@ -42,7 +42,7 @@ function setupAppForUser(name){
 $("#loginbtn").click(function(){
   firebase.auth().signInWithPopup(provider).then(function(result) {
     console.log("USER",result.user);
-    var name = result.user.displayName || result.user.email || result.user.uid;
+    var name = result.user.displayName || result.user.uid;
     setupAppForUser(name)
   }).catch(function(error) {
     alert("Something went wrong :(")
