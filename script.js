@@ -12,7 +12,7 @@ firebase.initializeApp({
 function setupAppForUser(name){
   $("#app").html( $("#votertemplate").html() )
   $("#add").click(function(){
-    var roundname = $("#newround").val();
+    var roundname = $("#newround").val().toLowerCase();
     firebase.database().ref('votes/'+roundname+'/'+name).set('undecided');
     $("#newround").val('')
   })
