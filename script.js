@@ -29,7 +29,7 @@ function setupAppForUser(name){
   })
   $("#rows").on("click",'button.voter',function(){
     var fw = $(this).attr("data-fw")
-    var roundname = $(this).closest('.row').attr('data-roundname')
+    var roundname = $(this).closest('.row').attr('data-roundname').toLowerCase()
     console.log("WAHA",roundname,fw)
     firebase.database().ref('votes/'+roundname+'/'+name).set(fw)
   })
